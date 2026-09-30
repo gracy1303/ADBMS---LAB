@@ -1,0 +1,6 @@
+SELECT name, mark
+FROM student
+WHERE mark > (
+    SELECT AVG(mark)
+    FROM student
+);
