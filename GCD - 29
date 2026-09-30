@@ -1,0 +1,16 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+    a NUMBER := 48;
+    b NUMBER := 18;
+    r NUMBER;
+BEGIN
+    WHILE b <> 0 LOOP
+        r := MOD(a, b);
+        a := b;
+        b := r;
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('GCD = ' || a);
+END;
+/
