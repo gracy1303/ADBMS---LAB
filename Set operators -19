@@ -1,0 +1,30 @@
+CREATE TABLE student (
+    name VARCHAR2(30)
+);
+
+CREATE TABLE employee (
+    emp_name VARCHAR2(30)
+);
+INSERT INTO student VALUES ('Arun');
+INSERT INTO student VALUES ('Bala');
+INSERT INTO student VALUES ('Kavi');
+INSERT INTO student VALUES ('Divya');
+
+INSERT INTO employee VALUES ('Kavi');
+INSERT INTO employee VALUES ('Divya');
+INSERT INTO employee VALUES ('Ravi');
+INSERT INTO employee VALUES ('Siva');
+
+COMMIT;
+SELECT name FROM student
+UNION
+SELECT emp_name FROM employee;
+SELECT name FROM student
+UNION ALL
+SELECT emp_name FROM employee;
+SELECT name FROM student
+INTERSECT
+SELECT emp_name FROM employee;
+SELECT name FROM student
+MINUS
+SELECT emp_name FROM employee;
