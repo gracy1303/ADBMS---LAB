@@ -1,0 +1,11 @@
+CREATE TABLE customer (
+    customer_id NUMBER(5) CONSTRAINT pk_customer PRIMARY KEY,
+    customer_name VARCHAR2(30) NOT NULL,
+    email VARCHAR2(50) UNIQUE,
+    age NUMBER(3) CHECK (age >= 18),
+    city VARCHAR2(30) DEFAULT 'Chennai'
+);
+INSERT INTO customer
+VALUES (1, 'Arun', 'arun@gmail.com', 20, 'Chennai');
+
+COMMIT;
