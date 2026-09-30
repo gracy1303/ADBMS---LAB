@@ -1,0 +1,9 @@
+SELECT
+    UPPER('hello') AS upper_case,
+    LOWER('HELLO') AS lower_case,
+    INITCAP('hello world') AS init_cap,
+    LENGTH('HELLO') AS length,
+    SUBSTR('HELLO', 2, 3) AS substring,
+    INSTR('HELLO', 'L') AS position,
+    CONCAT('Hello ', 'World') AS concatenated
+FROM dual;
