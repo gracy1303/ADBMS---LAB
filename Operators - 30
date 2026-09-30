@@ -1,0 +1,33 @@
+SELECT
+    10 + 5 AS addition,
+    10 - 5 AS subtraction,
+    10 * 5 AS multiplication,
+    10 / 5 AS division,
+    MOD(10, 3) AS remainder
+FROM dual;
+SELECT *
+FROM student
+WHERE mark > 75;
+SELECT *
+FROM student
+WHERE mark <= 80;
+SELECT *
+FROM student
+WHERE mark > 70
+AND mark < 90;
+SELECT *
+FROM student
+WHERE mark < 60
+OR mark > 90;
+SELECT *
+FROM student
+WHERE NOT mark = 85;
+SELECT *
+FROM student
+WHERE mark BETWEEN 70 AND 90;
+SELECT *
+FROM student
+WHERE id IN (1, 3, 4);
+SELECT *
+FROM student
+WHERE name LIKE 'A%';
