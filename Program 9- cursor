@@ -1,0 +1,25 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+    CURSOR c_student IS
+        SELECT id, name, mark
+        FROM student;
+
+    v_id student.id%TYPE;
+    v_name student.name%TYPE;
+    v_mark student.mark%TYPE;
+BEGIN
+    OPEN c_student;
+
+    LOOP
+        FETCH c_student INTO v_id, v_name, v_mark;
+        EXIT WHEN c_student%NOTFOUND;
+
+        DBMS_OUTPUT.PUT_LINE(
+            v_id || ' ' || v_name || ' ' || v_mark
+        );
+    END LOOP;
+
+    CLOSE c_student;
+END;
+/
