@@ -1,0 +1,9 @@
+SELECT
+    ABS(-25) AS absolute_value,
+    MOD(10, 3) AS remainder,
+    POWER(2, 3) AS power_value,
+    SQRT(25) AS square_root,
+    ROUND(12.567, 2) AS rounded_value,
+    CEIL(12.3) AS ceiling_value,
+    FLOOR(12.8) AS floor_value
+FROM dual;
