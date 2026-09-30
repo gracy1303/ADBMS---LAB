@@ -1,0 +1,8 @@
+-- 1. DDL - CREATE
+CREATE TABLE student (
+    id NUMBER(5),
+    name VARCHAR2(30),
+    mark NUMBER(5)
+);
+-- 4. DDL - RENAME
+RENAME student TO students;
