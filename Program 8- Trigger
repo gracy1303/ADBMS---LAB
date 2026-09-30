@@ -1,0 +1,17 @@
+CREATE TABLE employee (
+    emp_id NUMBER(5),
+    emp_name VARCHAR2(30),
+    salary NUMBER(10,2)
+);
+CREATE OR REPLACE TRIGGER salary_check
+BEFORE INSERT OR UPDATE ON employee
+FOR EACH ROW
+BEGIN
+    IF :NEW.salary < 10000 THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Salary must be at least 10000');
+    END IF;
+END;
+/
+INSERT INTO employee VALUES (1, 'Arun', 15000);
+
+COMMIT;
