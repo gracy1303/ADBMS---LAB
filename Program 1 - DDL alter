@@ -1,0 +1,2 @@
+-- 2. DDL - ALTER
+ALTER TABLE student ADD department VARCHAR2(30);
