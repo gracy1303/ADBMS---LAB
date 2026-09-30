@@ -1,0 +1,20 @@
+CREATE TABLE student (
+    id NUMBER(5),
+    name VARCHAR2(30),
+    mark NUMBER(5)
+);
+
+INSERT INTO student VALUES (1, 'Arun', 85);
+INSERT INTO student VALUES (2, 'Bala', 72);
+INSERT INTO student VALUES (3, 'Cathy', 90);
+
+COMMIT;
+INSERT INTO student VALUES (6, 'Fahad', 75);
+
+SAVEPOINT sp1;
+
+INSERT INTO student VALUES (7, 'Gokul', 82);
+
+ROLLBACK TO sp1;
+
+COMMIT;
